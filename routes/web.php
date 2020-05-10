@@ -10,10 +10,6 @@ Route::prefix('api')->group(function() {
     );
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // CSM routes
 Route::prefix('admin')->group(function() {
     Route::resource(
@@ -21,4 +17,9 @@ Route::prefix('admin')->group(function() {
         'Admin\ItemController',
         ['only' => ['index', 'show', 'create', 'edit', 'update', 'destroy']]
     );
+});
+
+// top
+Route::get('/', function () {
+    return view('welcome');
 });
