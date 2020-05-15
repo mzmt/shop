@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- タスクフォームの作成 -->
-
-    <!-- 現在のタスク -->
     @if (count($items) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">

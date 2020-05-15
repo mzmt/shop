@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 
 // Web routes
@@ -15,7 +16,7 @@ Route::prefix('admin')->group(function() {
     Route::resource(
         'items',
         'Admin\ItemController',
-        ['only' => ['index', 'show', 'create', 'edit', 'update', 'destroy']]
+        ['only' => ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']]
     );
 });
 
