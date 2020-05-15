@@ -6,7 +6,6 @@
             <div class="panel-heading">
                 たぬき商店
             </div>
-
             <div class="panel-body">
                 <table class="table table-striped task-table">
 

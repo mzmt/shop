@@ -10,17 +10,16 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::all();
-        return view('items/index', ['items' => $items]);
+        return view('index', ['items' => $items]);
     }
 
     public function create()
     {
-
+        return view('create');
     }
 
     public function store(Request $request)
     {
-        //
     }
 
     public function show($id)
