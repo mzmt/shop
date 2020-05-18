@@ -42,6 +42,7 @@
                 </div>
             </div>
         </form>
+        <a href="{{ action('Admin\ItemsController@index')}}">商品一覧</a>
     </div>
 </div>
 

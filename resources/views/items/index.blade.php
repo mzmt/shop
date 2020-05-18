@@ -37,6 +37,7 @@
                     </tbody>
                 </table>
             </div>
+         <a href="{{ action('Admin\ItemsController@create') }}">新規登録</a>
         </div>
     @endif
 @endsection
