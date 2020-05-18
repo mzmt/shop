@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Item;
+use App\Http\Requests\ItemCreate;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -18,16 +19,8 @@ class ItemController extends Controller
         return view('items/create');
     }
 
-    public function store(Request $request)
+    public function store(ItemCreate $request)
     {
-        $validatedData = $request->validate([
-            // 'name' => ['required', 'unique:post', 'max:255'],
-            'name' => 'required',
-            'price' => 'required',
-            'description' => 'required',
-        ]);
-        // nested paramsは '.' で取得する
-        // e.g. 'author.description' => 'required'
         $item =  new Item;
         $item->name = $request->name;
         $item->price = $request->price;
