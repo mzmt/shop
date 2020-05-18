@@ -21,7 +21,11 @@
                             <tr>
                                 <!-- タスク名 -->
                                 <td class="table-text">
-                                    <div>{{ $item->name }}</div>
+                                    <div>
+                                        <a href="{{ action('Admin\ItemsController@show', $item->id) }}">
+                                    {{ $item->description }}
+                                        </a>
+                                    </div>
                                 </td>
                                 <td class="table-text">
                                     <div>{{ $item->description }}</div>
