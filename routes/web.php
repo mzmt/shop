@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('api')->group(function() {
     Route::resource(
         'items',
-        'Api\ItemController',
+        'Api\ItemsController',
         ['only' => ['index', 'show']]
     );
 });
@@ -15,7 +15,7 @@ Route::prefix('api')->group(function() {
 Route::prefix('admin')->group(function() {
     Route::resource(
         'items',
-        'Admin\ItemController',
+        'Admin\ItemsController',
         ['only' => ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']]
     );
 });

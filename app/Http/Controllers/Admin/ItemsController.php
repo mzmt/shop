@@ -6,7 +6,7 @@ use App\Item;
 use App\Http\Requests\ItemCreate;
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class ItemsController extends Controller
 {
     public function index()
     {

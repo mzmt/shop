@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Item;
 use Illuminate\Http\Request;
 
-class ItemController extends Controller
+class ItemsController extends Controller
 {
     public function index()
     {
