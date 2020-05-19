@@ -15,8 +15,7 @@ Route::prefix('api')->group(function() {
 Route::prefix('admin')->group(function() {
     Route::resource(
         'items',
-        'Admin\ItemsController',
-        ['only' => ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']]
+        'Admin\ItemsController'
     );
 });
 
