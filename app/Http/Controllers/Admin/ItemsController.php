@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Item;
 use App\Http\Requests\ItemCreate;
+use App\Http\Requests\ItemEdit;
 use Illuminate\Http\Request;
 
 class ItemsController extends Controller
@@ -37,12 +38,18 @@ class ItemsController extends Controller
 
     public function edit($id)
     {
-        //
+        $item = Item::find($id);
+        return view('items/edit', ['item' => $item]);
     }
 
-    public function update(Request $request, $id)
+    public function update(ItemEdit $request, $id)
     {
-        //
+        $item = Item::find($id);
+        $item->name = $request->name;
+        $item->price = $request->price;
+        $item->description = $request->description;
+        $item->save();
+        return view('items/show', ['item' => $item]);
     }
 
     public function destroy($id)

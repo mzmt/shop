@@ -19,7 +19,9 @@
         <div>name: {{ $item->name }}</div>
         <div>price: {{ $item->price }}</div>
         <div>description: {{ $item->description }}</div>
+        <div>登録日: {{ $item->created_at }}</div>
         <a href="{{ action('Admin\ItemsController@index')}}">商品一覧</a>
+        <a href="{{ action('Admin\ItemsController@edit', $item->id) }}">編集</a>
     </div>
 </div>
 @endsection
