@@ -9,9 +9,13 @@ use Illuminate\Http\Request;
 
 class ItemsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $items = Item::all();
+        $q = $request->input('q');
+        if(!empty($q)){
+            $items = Item::where('description','like','%'.$q.'%')->get();
+        }
         return view('items/index', ['items' => $items]);
     }
 

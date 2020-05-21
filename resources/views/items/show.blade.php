@@ -20,7 +20,7 @@
         <div>price: {{ $item->price }}</div>
         <div>description: {{ $item->description }}</div>
         <div>登録日: {{ $item->created_at }}</div>
-        <a href="{{ action('Admin\ItemsController@index')}}">商品一覧</a>
+        <a href="{{ action('Admin\ItemsController@index') }}">商品一覧</a>
         <a href="{{ action('Admin\ItemsController@edit', $item->id) }}">編集</a>
         <form action="{{ action('Admin\ItemsController@destroy', $item->id) }}" method="POST">
             <input type="hidden" name="_method" value="DELETE">
